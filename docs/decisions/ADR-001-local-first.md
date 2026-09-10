@@ -1,43 +1,83 @@
-# ADR-001: Local-first
-
-> **Disclaimer:** Lazarus Biotechnologies is entirely fictional. All systems, data, and decisions in this project are synthetic. No actual classified information, CUI, patient information, government data, or customer data is used.
+# ADR-001 — Local-First Infrastructure
 
 **Status:** Accepted  
-**Date:** 2026-09-10  
-**Deciders:** Project owner (TBD)
+**Date:** 2026-09-10
+**Supersedes:** None
 
 ## Context
 
-Lazarus Biotechnologies documentation includes company structure, information governance, and later simulator, detection, and portfolio material. Some of that material will be Confidential. Restricted data (real PII, credentials, unpublished IP payloads) must not become someone else's system of record by default.
+Lazarus Biotechnologies requires persistent enterprise infrastructure
+capable of generating realistic security telemetry while maintaining
+minimal recurring operating costs.
 
-A cloud-first approach (wiki, SaaS GRC, shared drives as primary) would split truth across vendors, increase accidental exposure, and make it harder to keep Restricted data out of the workstream.
+Deploying the entire environment in a public cloud would increase
+recurring costs without providing equivalent educational value for
+every workload.
 
 ## Decision
 
-This project is **local-first**.
+Persistent compute workloads will run locally whenever practical.
 
-1. The git repository on the local workstation is the system of record for Internal documentation and for Confidential material that has been stripped of secrets.
-2. Restricted data does not go in git, screenshots, or portfolio exports.
-3. Cloud services are optional conveniences (remote backup of the repo, collaboration), not the place where crown jewels are born or stored.
-4. New tools (simulator, detections, infrastructure) default to local execution and local files unless a later ADR supersedes this one.
+Cloud services will be introduced when they provide meaningful
+technical or educational capabilities that cannot reasonably be
+reproduced locally.
+
+Organizational scale may be simulated while representative systems
+produce genuine security telemetry.
+
+## Alternatives Considered
+
+### Cloud-First
+
+Deploy most infrastructure within Microsoft Azure.
+
+Rejected because persistent compute and telemetry could create
+unnecessary recurring costs.
+
+### Fully Local
+
+Keep all infrastructure local.
+
+Rejected because this would unnecessarily eliminate opportunities to
+gain experience with real cloud identity and security technologies.
+
+### Hybrid Local-First
+
+Use local infrastructure for persistent workloads and targeted cloud
+services where justified.
+
+Selected.
+
+## Rationale
+
+The hybrid local-first approach supports the project's $0 recurring
+cost target while preserving opportunities to work with enterprise
+cloud technologies.
+
+## Security Implications
+
+Local infrastructure must be properly segmented and isolated.
+
+Cloud credentials and secrets must never be stored in the public
+repository.
+
+Attack simulations must remain limited to systems specifically
+authorized for testing.
+
+## Cost Implications
+
+Target recurring cost: $0/month.
+
+Soft ceiling: $10/month.
+
+Cloud resources exceeding the project's normal cost constraints
+require explicit justification.
 
 ## Consequences
 
-### Positive
+Local hardware capacity becomes an architectural constraint.
 
-- One tree to read: `docs/`, `data/`, `infrastructure/`, `simulator/`, `detections/`
-- Easier classification enforcement: if it is in git, it must be fit for git
-- Architecture and evidence stay portable for portfolio work
-- Fewer implicit vendors in the trust boundary
+Some enterprise-scale behavior will need to be simulated rather than
+physically reproduced.
 
-### Negative
-
-- Collaboration requires git discipline rather than a live shared doc
-- Backup and device protection become the operator's problem
-- Real Restricted datasets need a separate, non-repo store if they are ever used
-
-## Follow-ups
-
-- Document backup/restore of the local repo in `docs/architecture/` when that folder is filled in
-- Add ADRs if a specific cloud or lab environment is later required
-- Keep [information-classification.md](../02-information-governance/information-classification.md) aligned with this decision
+Cloud exercises may need to be temporary to control costs.
