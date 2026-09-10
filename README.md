@@ -32,7 +32,7 @@ journey from initial architecture through ongoing security operations.
 - [x] Repository foundation
 - [x] Documentation standard
 - [x] Master roadmap
-- [ ] Portfolio architecture
+- [x] Portfolio architecture
 - [ ] Enterprise architecture
 - [ ] Infrastructure deployment
 

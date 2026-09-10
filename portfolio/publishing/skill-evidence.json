@@ -1,0 +1,22 @@
+{
+  "skills": [
+    {
+      "skill": "Information Classification",
+      "evidence": [
+        "docs/02-information-governance/information-classification.md"
+      ]
+    },
+    {
+      "skill": "Security Architecture",
+      "evidence": [
+        "docs/decisions/ADR-001-local-first.md"
+      ]
+    },
+    {
+      "skill": "Technical Documentation",
+      "evidence": [
+        "docs/00-project-definition/documentation-standard.md"
+      ]
+    }
+  ]
+}
