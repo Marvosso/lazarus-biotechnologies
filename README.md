@@ -5,7 +5,7 @@
 ## Project Status
 
 **Current Phase:** Project Definition  
-**Current Milestone:** 00 — Foundation  
+**Current Milestone:** 00.09 — Portfolio Architecture  
 **Environment Status:** Not Deployed
 
 ## Overview
@@ -27,10 +27,11 @@ journey from initial architecture through ongoing security operations.
 - [x] Company concept
 - [x] Organizational model
 - [x] Initial workforce
-- [x] Information classification design
-- [x] Project scope and constraints
-- [ ] Repository foundation
-- [ ] Documentation standard
+- [x] Information classification
+- [x] Scope and constraints
+- [x] Repository foundation
+- [x] Documentation standard
+- [x] Master roadmap
 - [ ] Portfolio architecture
 - [ ] Enterprise architecture
 - [ ] Infrastructure deployment

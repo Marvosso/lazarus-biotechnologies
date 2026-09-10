@@ -1,0 +1,588 @@
+[1mdiff --git a/docs/00-project-definition/commit-convention.md b/docs/00-project-definition/commit-convention.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..6b3291b[m
+[1m--- /dev/null[m
+[1m+++ b/docs/00-project-definition/commit-convention.md[m
+[36m@@ -0,0 +1,27 @@[m
+[32m+[m[32m# Commit Convention[m
+[32m+[m
+[32m+[m[32mLightweight prefixes for Lazarus Biotechnologies so `git log --oneline` tells the story of the lab.[m
+[32m+[m
+[32m+[m[32mDo not obsess over perfect Conventional Commits syntax.[m
+[32m+[m
+[32m+[m[32m## Prefixes[m
+[32m+[m
+[32m+[m[32m- `docs:`[m
+[32m+[m[32m- `feat:`[m
+[32m+[m[32m- `fix:`[m
+[32m+[m[32m- `refactor:`[m
+[32m+[m[32m- `test:`[m
+[32m+[m[32m- `chore:`[m
+[32m+[m[32m- `security:`[m
+[32m+[m
+[32m+[m[32m## Examples[m
+[32m+[m
+[32m+[m[32m```text[m
+[32m+[m[32mdocs: establish information classification standard[m
+[32m+[m[32mfeat: add employee activity simulator[m
+[32m+[m[32mfeat: onboard Windows endpoint telemetry[m
+[32m+[m[32mfix: correct Wazuh agent connectivity[m
+[32m+[m[32msecurity: restrict ORION data access[m
+[32m+[m[32mtest: validate authentication event collection[m
+[32m+[m[32mdocs: document first access review[m
+[32m+[m[32m```[m
+[1mdiff --git a/docs/00-project-definition/documentation-standard.md b/docs/00-project-definition/documentation-standard.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..03fbab9[m
+[1m--- /dev/null[m
+[1m+++ b/docs/00-project-definition/documentation-standard.md[m
+[36m@@ -0,0 +1,266 @@[m
+[32m+[m[32m# Lazarus Biotechnologies Documentation Standard[m
+[32m+[m
+[32m+[m[32m**Document ID:** LBT-DOC-001[m[41m  [m
+[32m+[m[32m**Status:** Active[m[41m  [m
+[32m+[m[32m**Project:** Lazarus Biotechnologies Virtual Enterprise[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## 1. Purpose[m
+[32m+[m
+[32m+[m[32mThis standard defines how the Lazarus Biotechnologies virtual[m
+[32m+[m[32menterprise project is documented.[m
+[32m+[m
+[32m+[m[32mDocumentation is treated as a project deliverable rather than an[m
+[32m+[m[32mafterthought.[m
+[32m+[m
+[32m+[m[32mThe objective is to maintain a reproducible historical record of the[m
+[32m+[m[32menvironment's design, implementation, testing, security posture,[m
+[32m+[m[32mincidents, failures, remediation, and evolution.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## 2. Documentation Principles[m
+[32m+[m
+[32m+[m[32mProject documentation should answer, where applicable:[m
+[32m+[m
+[32m+[m[32m1. What was being implemented?[m
+[32m+[m[32m2. Why was it necessary?[m
+[32m+[m[32m3. What technology or approach was selected?[m
+[32m+[m[32m4. What alternatives were considered?[m
+[32m+[m[32m5. How was it implemented?[m
+[32m+[m[32m6. How was it tested?[m
+[32m+[m[32m7. How was successful implementation verified?[m
+[32m+[m[32m8. What problems occurred?[m
+[32m+[m[32m9. How were those problems resolved?[m
+[32m+[m[32m10. What was learned?[m
+[32m+[m[32m11. What should happen next?[m
+[32m+[m
+[32m+[m[32mImportant failures and troubleshooting steps should not be removed[m
+[32m+[m[32mfrom project history.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## 3. Implementation Workflow[m
+[32m+[m
+[32m+[m[32mSubstantial project changes should follow:[m
+[32m+[m
+[32m+[m[32mLEARN → BUILD → TEST → VERIFY → DOCUMENT → COMMIT[m
+[32m+[m
+[32m+[m[32m### LEARN[m
+[32m+[m
+[32m+[m[32mUnderstand the relevant technology, security concept, business[m
+[32m+[m[32mrequirement, or control before implementation.[m
+[32m+[m
+[32m+[m[32m### BUILD[m
+[32m+[m
+[32m+[m[32mImplement the planned change using documented and reproducible steps.[m
+[32m+[m
+[32m+[m[32m### TEST[m
+[32m+[m
+[32m+[m[32mDeliberately test the implementation.[m
+[32m+[m
+[32m+[m[32m### VERIFY[m
+[32m+[m
+[32m+[m[32mCollect evidence demonstrating that the expected result occurred.[m
+[32m+[m
+[32m+[m[32m### DOCUMENT[m
+[32m+[m
+[32m+[m[32mRecord configuration, evidence, decisions, problems, and lessons.[m
+[32m+[m
+[32m+[m[32m### COMMIT[m
+[32m+[m
+[32m+[m[32mCommit the completed and reviewed change to version control.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## 4. Implementation Record[m
+[32m+[m
+[32m+[m[32mMajor implementations should record:[m
+[32m+[m
+[32m+[m[32m- Objective[m
+[32m+[m[32m- Business requirement[m
+[32m+[m[32m- Security requirement[m
+[32m+[m[32m- Prerequisites[m
+[32m+[m[32m- Architecture[m
+[32m+[m[32m- Implementation steps[m
+[32m+[m[32m- Configuration[m
+[32m+[m[32m- Testing procedure[m
+[32m+[m[32m- Verification evidence[m
+[32m+[m[32m- Problems encountered[m
+[32m+[m[32m- Resolution[m
+[32m+[m[32m- Lessons learned[m
+[32m+[m[32m- Security considerations[m
+[32m+[m[32m- Cost impact[m
+[32m+[m[32m- Next steps[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## 5. Architecture Decisions[m
+[32m+[m
+[32m+[m[32mSignificant architecture decisions must be recorded using an[m
+[32m+[m[32mArchitecture Decision Record (ADR).[m
+[32m+[m
+[32m+[m[32mADRs should include:[m
+[32m+[m
+[32m+[m[32m- Decision ID[m
+[32m+[m[32m- Title[m
+[32m+[m[32m- Status[m
+[32m+[m[32m- Context[m
+[32m+[m[32m- Decision[m
+[32m+[m[32m- Alternatives considered[m
+[32m+[m[32m- Rationale[m
+[32m+[m[32m- Security implications[m
+[32m+[m[32m- Cost implications[m
+[32m+[m[32m- Consequences[m
+[32m+[m
+[32m+[m[32mAccepted ADRs should not be silently rewritten when architecture[m
+[32m+[m[32mchanges.[m
+[32m+[m
+[32m+[m[32mA new ADR should supersede the previous decision where appropriate.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## 6. Evidence[m
+[32m+[m
+[32m+[m[32mEvidence may include:[m
+[32m+[m
+[32m+[m[32m- Screenshots[m
+[32m+[m[32m- Command output[m
+[32m+[m[32m- Configuration files[m
+[32m+[m[32m- Queries[m
+[32m+[m[32m- Logs[m
+[32m+[m[32m- Diagrams[m
+[32m+[m[32m- Test results[m
+[32m+[m[32m- Dashboard exports[m
+[32m+[m[32m- Code[m
+[32m+[m[32m- Detection rules[m
+[32m+[m
+[32m+[m[32mEvidence should demonstrate a technical or analytical result rather[m
+[32m+[m[32mthan exist only for decoration.[m
+[32m+[m
+[32m+[m[32mSensitive information must be sanitized before publication.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## 7. Troubleshooting[m
+[32m+[m
+[32m+[m[32mMeaningful implementation failures should be documented.[m
+[32m+[m
+[32m+[m[32mTroubleshooting records should capture:[m
+[32m+[m
+[32m+[m[32m- Observed behavior[m
+[32m+[m[32m- Expected behavior[m
+[32m+[m[32m- Initial hypothesis[m
+[32m+[m[32m- Investigation[m
+[32m+[m[32m- Root cause[m
+[32m+[m[32m- Resolution[m
+[32m+[m[32m- Verification[m
+[32m+[m[32m- Lesson learned[m
+[32m+[m
+[32m+[m[32mFailures should not be removed merely to make the project appear[m
+[32m+[m[32mperfect.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## 8. Security Incidents[m
+[32m+[m
+[32m+[m[32mSecurity incidents will use separate incident case records.[m
+[32m+[m
+[32m+[m[32mIncident records should eventually include:[m
+[32m+[m
+[32m+[m[32m- Incident ID[m
+[32m+[m[32m- Detection source[m
+[32m+[m[32m- Initial alert[m
+[32m+[m[32m- Analyst observations[m
+[32m+[m[32m- Investigation timeline[m
+[32m+[m[32m- Evidence[m
+[32m+[m[32m- Scope[m
+[32m+[m[32m- Root cause[m
+[32m+[m[32m- Containment[m
+[32m+[m[32m- Eradication[m
+[32m+[m[32m- Recovery[m
+[32m+[m[32m- Business impact[m
+[32m+[m[32m- Control failures[m
+[32m+[m[32m- Recommendations[m
+[32m+[m[32m- Lessons learned[m
+[32m+[m
+[32m+[m[32mScenario ground truth must remain separate from analyst-facing[m
+[32m+[m[32mevidence until the investigation is complete.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## 9. Cost Tracking[m
+[32m+[m
+[32m+[m[32mCloud or paid resources must record:[m
+[32m+[m
+[32m+[m[32m- Resource[m
+[32m+[m[32m- Purpose[m
+[32m+[m[32m- Provider[m
+[32m+[m[32m- Date created[m
+[32m+[m[32m- Expected cost[m
+[32m+[m[32m- Actual cost[m
+[32m+[m[32m- Free-tier applicability[m
+[32m+[m[32m- Shutdown procedure[m
+[32m+[m[32m- Date removed[m
+[32m+[m
+[32m+[m[32mThe project's target recurring operating cost is $0 per month.[m
+[32m+[m
+[32m+[m[32mThe soft recurring-cost ceiling is $10 per month unless a higher[m
+[32m+[m[32mexpense is explicitly justified.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## 10. Versioning[m
+[32m+[m
+[32m+[m[32mImportant datasets and architecture states must be versioned.[m
+[32m+[m
+[32m+[m[32mHistorical state should not be overwritten when preserving it[m
+[32m+[m[32mprovides analytical or portfolio value.[m
+[32m+[m
+[32m+[m[32mExamples include:[m
+[32m+[m
+[32m+[m[32m- Workforce snapshots[m
+[32m+[m[32m- Architecture versions[m
+[32m+[m[32m- Security maturity[m
+[32m+[m[32m- Asset inventory[m
+[32m+[m[32m- Access assignments[m
+[32m+[m[32m- Risk register[m
+[32m+[m[32m- Control implementation[m
+[32m+[m[32m- Project metrics[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## 11. Publication[m
+[32m+[m
+[32m+[m[32mThe public repository and portfolio must never intentionally contain:[m
+[32m+[m
+[32m+[m[32m- Real credentials[m
+[32m+[m[32m- API tokens[m
+[32m+[m[32m- Private keys[m
+[32m+[m[32m- Personal sensitive information[m
+[32m+[m[32m- Actual CUI[m
+[32m+[m[32m- Classified information[m
+[32m+[m[32m- Real patient information[m
+[32m+[m[32m- Customer data[m
+[32m+[m[32m- Hidden scenario ground truth[m
+[32m+[m[32m- Unsafe attack infrastructure details[m
+[32m+[m
+[32m+[m[32mAll company information is synthetic unless explicitly documented[m
+[32m+[m[32motherwise.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## 12. Definition of Done[m
+[32m+[m
+[32m+[m[32mA major project task is not complete merely because the technology[m
+[32m+[m[32mworks.[m
+[32m+[m
+[32m+[m[32mA task is complete when:[m
+[32m+[m
+[32m+[m[32m- Implementation is complete[m
+[32m+[m[32m- Testing is complete[m
+[32m+[m[32m- Verification evidence exists[m
+[32m+[m[32m- Documentation is updated[m
+[32m+[m[32m- Sensitive information has been reviewed[m
+[32m+[m[32m- Changes are committed to version control[m
+[1mdiff --git a/docs/decisions/ADR-001-local-first.md b/docs/decisions/ADR-001-local-first.md[m
+[1mindex 2c47311..c9a203b 100644[m
+[1m--- a/docs/decisions/ADR-001-local-first.md[m
+[1m+++ b/docs/decisions/ADR-001-local-first.md[m
+[36m@@ -1,43 +1,83 @@[m
+[31m-# ADR-001: Local-first[m
+[31m-[m
+[31m-> **Disclaimer:** Lazarus Biotechnologies is entirely fictional. All systems, data, and decisions in this project are synthetic. No actual classified information, CUI, patient information, government data, or customer data is used.[m
+[32m+[m[32m# ADR-001 — Local-First Infrastructure[m
+ [m
+ **Status:** Accepted  [m
+[31m-**Date:** 2026-09-10  [m
+[31m-**Deciders:** Project owner (TBD)[m
+[32m+[m[32m**Date:** 2026-09-10[m
+[32m+[m[32m**Supersedes:** None[m
+ [m
+ ## Context[m
+ [m
+[31m-Lazarus Biotechnologies documentation includes company structure, information governance, and later simulator, detection, and portfolio material. Some of that material will be Confidential. Restricted data (real PII, credentials, unpublished IP payloads) must not become someone else's system of record by default.[m
+[32m+[m[32mLazarus Biotechnologies requires persistent enterprise infrastructure[m
+[32m+[m[32mcapable of generating realistic security telemetry while maintaining[m
+[32m+[m[32mminimal recurring operating costs.[m
+ [m
+[31m-A cloud-first approach (wiki, SaaS GRC, shared drives as primary) would split truth across vendors, increase accidental exposure, and make it harder to keep Restricted data out of the workstream.[m
+[32m+[m[32mDeploying the entire environment in a public cloud would increase[m
+[32m+[m[32mrecurring costs without providing equivalent educational value for[m
+[32m+[m[32mevery workload.[m
+ [m
+ ## Decision[m
+ [m
+[31m-This project is **local-first**.[m
+[32m+[m[32mPersistent compute workloads will run locally whenever practical.[m
+ [m
+[31m-1. The git repository on the local workstation is the system of record for Internal documentation and for Confidential material that has been stripped of secrets.[m
+[31m-2. Restricted data does not go in git, screenshots, or portfolio exports.[m
+[31m-3. Cloud services are optional conveniences (remote backup of the repo, collaboration), not the place where crown jewels are born or stored.[m
+[31m-4. New tools (simulator, detections, infrastructure) default to local execution and local files unless a later ADR supersedes this one.[m
+[32m+[m[32mCloud services will be introduced when they provide meaningful[m
+[32m+[m[32mtechnical or educational capabilities that cannot reasonably be[m
+[32m+[m[32mreproduced locally.[m
+ [m
+[31m-## Consequences[m
+[32m+[m[32mOrganizational scale may be simulated while representative systems[m
+[32m+[m[32mproduce genuine security telemetry.[m
+[32m+[m
+[32m+[m[32m## Alternatives Considered[m
+[32m+[m
+[32m+[m[32m### Cloud-First[m
+[32m+[m
+[32m+[m[32mDeploy most infrastructure within Microsoft Azure.[m
+[32m+[m
+[32m+[m[32mRejected because persistent compute and telemetry could create[m
+[32m+[m[32munnecessary recurring costs.[m
+[32m+[m
+[32m+[m[32m### Fully Local[m
+[32m+[m
+[32m+[m[32mKeep all infrastructure local.[m
+[32m+[m
+[32m+[m[32mRejected because this would unnecessarily eliminate opportunities to[m
+[32m+[m[32mgain experience with real cloud identity and security technologies.[m
+[32m+[m
+[32m+[m[32m### Hybrid Local-First[m
+[32m+[m
+[32m+[m[32mUse local infrastructure for persistent workloads and targeted cloud[m
+[32m+[m[32mservices where justified.[m
+ [m
+[31m-### Positive[m
+[32m+[m[32mSelected.[m
+ [m
+[31m-- One tree to read: `docs/`, `data/`, `infrastructure/`, `simulator/`, `detections/`[m
+[31m-- Easier classification enforcement: if it is in git, it must be fit for git[m
+[31m-- Architecture and evidence stay portable for portfolio work[m
+[31m-- Fewer implicit vendors in the trust boundary[m
+[32m+[m[32m## Rationale[m
+ [m
+[31m-### Negative[m
+[32m+[m[32mThe hybrid local-first approach supports the project's $0 recurring[m
+[32m+[m[32mcost target while preserving opportunities to work with enterprise[m
+[32m+[m[32mcloud technologies.[m
+[32m+[m
+[32m+[m[32m## Security Implications[m
+[32m+[m
+[32m+[m[32mLocal infrastructure must be properly segmented and isolated.[m
+[32m+[m
+[32m+[m[32mCloud credentials and secrets must never be stored in the public[m
+[32m+[m[32mrepository.[m
+[32m+[m
+[32m+[m[32mAttack simulations must remain limited to systems specifically[m
+[32m+[m[32mauthorized for testing.[m
+[32m+[m
+[32m+[m[32m## Cost Implications[m
+[32m+[m
+[32m+[m[32mTarget recurring cost: $0/month.[m
+[32m+[m
+[32m+[m[32mSoft ceiling: $10/month.[m
+[32m+[m
+[32m+[m[32mCloud resources exceeding the project's normal cost constraints[m
+[32m+[m[32mrequire explicit justification.[m
+[32m+[m
+[32m+[m[32m## Consequences[m
+ [m
+[31m-- Collaboration requires git discipline rather than a live shared doc[m
+[31m-- Backup and device protection become the operator's problem[m
+[31m-- Real Restricted datasets need a separate, non-repo store if they are ever used[m
+[32m+[m[32mLocal hardware capacity becomes an architectural constraint.[m
+ [m
+[31m-## Follow-ups[m
+[32m+[m[32mSome enterprise-scale behavior will need to be simulated rather than[m
+[32m+[m[32mphysically reproduced.[m
+ [m
+[31m-- Document backup/restore of the local repo in `docs/architecture/` when that folder is filled in[m
+[31m-- Add ADRs if a specific cloud or lab environment is later required[m
+[31m-- Keep [information-classification.md](../02-information-governance/information-classification.md) aligned with this decision[m
+[32m+[m[32mCloud exercises may need to be temporary to control costs.[m
+[1mdiff --git a/docs/templates/adr-template.md b/docs/templates/adr-template.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..bfaa7d2[m
+[1m--- /dev/null[m
+[1m+++ b/docs/templates/adr-template.md[m
+[36m@@ -0,0 +1,35 @@[m
+[32m+[m[32m# ADR-XXX — [Decision][m
+[32m+[m
+[32m+[m[32m**Status:** Proposed[m[41m  [m
+[32m+[m[32m**Date:**[m[41m  [m
+[32m+[m[32m**Supersedes:** None[m
+[32m+[m
+[32m+[m[32m## Context[m
+[32m+[m
+[32m+[m[32mWhat problem requires a decision?[m
+[32m+[m
+[32m+[m[32m## Decision[m
+[32m+[m
+[32m+[m[32mWhat was decided?[m
+[32m+[m
+[32m+[m[32m## Alternatives Considered[m
+[32m+[m
+[32m+[m[32m### Alternative 1[m
+[32m+[m
+[32m+[m[32m### Alternative 2[m
+[32m+[m
+[32m+[m[32m## Rationale[m
+[32m+[m
+[32m+[m[32mWhy was this option selected?[m
+[32m+[m
+[32m+[m[32m## Security Implications[m
+[32m+[m
+[32m+[m[32mWhat security consequences exist?[m
+[32m+[m
+[32m+[m[32m## Cost Implications[m
+[32m+[m
+[32m+[m[32mWhat does this decision cost?[m
+[32m+[m
+[32m+[m[32m## Consequences[m
+[32m+[m
+[32m+[m[32mWhat tradeoffs or future constraints does this create?[m
+[1mdiff --git a/docs/templates/implementation-template.md b/docs/templates/implementation-template.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..81a88ae[m
+[1m--- /dev/null[m
+[1m+++ b/docs/templates/implementation-template.md[m
+[36m@@ -0,0 +1,79 @@[m
+[32m+[m[32m# [Implementation Title][m
+[32m+[m
+[32m+[m[32m**Status:** Planned[m[41m  [m
+[32m+[m[32m**Date Started:**[m[41m  [m
+[32m+[m[32m**Date Completed:**[m[41m  [m
+[32m+[m[32m**Project Phase:**[m[41m  [m
+[32m+[m[32m**Related ADR:**[m[41m  [m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## Objective[m
+[32m+[m
+[32m+[m[32mWhat are we implementing?[m
+[32m+[m
+[32m+[m[32m## Business Requirement[m
+[32m+[m
+[32m+[m[32mWhy does Lazarus need this capability?[m
+[32m+[m
+[32m+[m[32m## Security Requirement[m
+[32m+[m
+[32m+[m[32mWhat security problem or requirement does this address?[m
+[32m+[m
+[32m+[m[32m## Learning Objectives[m
+[32m+[m
+[32m+[m[32mWhat concepts should be understood through this implementation?[m
+[32m+[m
+[32m+[m[32m## Prerequisites[m
+[32m+[m
+[32m+[m[32mWhat must exist before beginning?[m
+[32m+[m
+[32m+[m[32m## Architecture[m
+[32m+[m
+[32m+[m[32mDescribe the relevant architecture.[m
+[32m+[m
+[32m+[m[32m## Implementation[m
+[32m+[m
+[32m+[m[32m### Step 1[m
+[32m+[m
+[32m+[m[32m### Step 2[m
+[32m+[m
+[32m+[m[32m### Step 3[m
+[32m+[m
+[32m+[m[32m## Testing[m
+[32m+[m
+[32m+[m[32mDescribe how the implementation was tested.[m
+[32m+[m
+[32m+[m[32m## Verification[m
+[32m+[m
+[32m+[m[32mRecord evidence proving that the implementation works.[m
+[32m+[m
+[32m+[m[32m## Problems Encountered[m
+[32m+[m
+[32m+[m[32mDocument meaningful problems.[m
+[32m+[m
+[32m+[m[32m## Resolution[m
+[32m+[m
+[32m+[m[32mExplain how problems were resolved.[m
+[32m+[m
+[32m+[m[32m## Security Considerations[m
+[32m+[m
+[32m+[m[32mDocument relevant risks and controls.[m
+[32m+[m
+[32m+[m[32m## Cost[m
+[32m+[m
+[32m+[m[32m**Expected:** $0[m[41m  [m
+[32m+[m[32m**Actual:** $0[m
+[32m+[m
+[32m+[m[32m## Lessons Learned[m
+[32m+[m
+[32m+[m[32mWhat was learned from this implementation?[m
+[32m+[m
+[32m+[m[32m## Next Steps[m
+[32m+[m
+[32m+[m[32mWhat should happen next?[m
+[32m+[m
+[32m+[m[32m## Evidence[m
+[32m+[m
+[32m+[m[32mList relevant screenshots, logs, commands, queries, configuration,[m
+[32m+[m[32mdiagrams, or other artifacts.[m
+[1mdiff --git a/docs/templates/troubleshooting-template.md b/docs/templates/troubleshooting-template.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..105bd2c[m
+[1m--- /dev/null[m
+[1m+++ b/docs/templates/troubleshooting-template.md[m
+[36m@@ -0,0 +1,37 @@[m
+[32m+[m[32m# Troubleshooting — [Issue][m
+[32m+[m
+[32m+[m[32m**Date:**[m[41m  [m
+[32m+[m[32m**System:**[m[41m  [m
+[32m+[m[32m**Status:** Open[m
+[32m+[m
+[32m+[m[32m## Observed Behavior[m
+[32m+[m
+[32m+[m[32mWhat happened?[m
+[32m+[m
+[32m+[m[32m## Expected Behavior[m
+[32m+[m
+[32m+[m[32mWhat should have happened?[m
+[32m+[m
+[32m+[m[32m## Initial Hypothesis[m
+[32m+[m
+[32m+[m[32mWhat did I initially think was wrong?[m
+[32m+[m
+[32m+[m[32m## Investigation[m
+[32m+[m
+[32m+[m[32mDocument investigation steps in chronological order.[m
+[32m+[m
+[32m+[m[32m## Root Cause[m
+[32m+[m
+[32m+[m[32mWhat actually caused the problem?[m
+[32m+[m
+[32m+[m[32m## Resolution[m
+[32m+[m
+[32m+[m[32mWhat fixed it?[m
+[32m+[m
+[32m+[m[32m## Verification[m
+[32m+[m
+[32m+[m[32mHow was the fix confirmed?[m
+[32m+[m
+[32m+[m[32m## Lessons Learned[m
+[32m+[m
+[32m+[m[32mWhat would I do differently next time?[m
