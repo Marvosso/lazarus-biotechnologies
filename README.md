@@ -4,9 +4,10 @@
 
 ## Project Status
 
-**Current Phase:** Project Definition  
-**Current Milestone:** 00.09 — Portfolio Architecture  
-**Environment Status:** Not Deployed
+**Current Phase:** Core Infrastructure  
+**Current Milestone:** 02.01 — Host Assessment  
+**Architecture Baseline:** v0.1  
+**Infrastructure Status:** Not Deployed
 
 ## Overview
 
@@ -33,8 +34,17 @@ journey from initial architecture through ongoing security operations.
 - [x] Documentation standard
 - [x] Master roadmap
 - [x] Portfolio architecture
-- [ ] Enterprise architecture
-- [ ] Infrastructure deployment
+- [x] Enterprise requirements
+- [x] Logical architecture
+- [x] Network architecture
+- [x] Identity architecture
+- [x] Data flow architecture
+- [x] Security architecture
+- [x] Architecture baseline
+- [ ] Host assessment
+- [ ] Virtualization platform
+- [ ] Lab networking
+- [ ] Core infrastructure
 
 ## Disclaimer
 

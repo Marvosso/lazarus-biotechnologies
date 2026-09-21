@@ -1,0 +1,8 @@
+architecture_id,component,version,status,implementation_status
+ARCH-001,Enterprise Requirements,0.1,Approved,Design Only
+ARCH-002,Logical Architecture,0.1,Approved,Design Only
+ARCH-003,Network Architecture,0.1,Approved,Design Only
+ARCH-004,Identity Architecture,0.1,Approved,Design Only
+ARCH-005,Data Flow Architecture,0.1,Approved,Design Only
+ARCH-006,Security Architecture,0.1,Approved,Design Only
+ARCH-007,Control Traceability,0.1,Approved,Design Only
