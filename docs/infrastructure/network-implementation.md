@@ -93,9 +93,9 @@ DHCP is not deployed. Initial systems will use static addresses.
 
 No routing, NAT, or firewall policy is implemented in this step.
 
-A dedicated virtual firewall/router (candidates: OPNsense, pfSense,
-Linux router/firewall) is preferred over host Windows routing. Selection
-and install are deferred until Layer-2 networks exist.
+A dedicated virtual firewall/router is required between these Layer 2
+islands. See [ADR-005](../decisions/ADR-005-virtual-firewall.md). OPNsense
+is selected; the VM is not created in this step.
 
 ## Implementation Record
 
@@ -154,3 +154,20 @@ Private switches did not attach the physical host to USER, SERVER, or
 SECURITY. That is the intended boundary.
 
 Structured inventory: [network-inventory.csv](../../data/governance/network-inventory.csv).
+
+### Layer 2 Network Verification
+
+Three Lazarus private Hyper-V switches were successfully created:
+
+- LBT-USER
+- LBT-SERVER
+- LBT-SECURITY
+
+Verification confirmed:
+
+- All three switches use Hyper-V Private mode.
+- No Lazarus host-side network adapters were created.
+- The Microsoft Default Switch remains unchanged.
+- No IP addressing, routing, NAT, DHCP, or firewall policy has yet been implemented.
+
+Result: PASS
