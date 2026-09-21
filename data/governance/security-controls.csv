@@ -1,0 +1,17 @@
+control_id,domain,control_name,control_type,status,implementation_phase
+LBT-AC-001,Access Control,Unique User Identity,Preventive,Planned,4
+LBT-AC-002,Access Control,Role Based Access,Preventive,Planned,4
+LBT-AC-003,Access Control,Least Privilege,Preventive,Planned,4
+LBT-AC-004,Access Control,Access Review,Detective,Planned,4
+LBT-IA-001,Identity,MFA,Preventive,Planned,4
+LBT-NET-001,Network,Security Zone Segmentation,Preventive,Planned,2
+LBT-NET-002,Network,Cyber Range Isolation,Preventive,Planned,2
+LBT-LOG-001,Logging,Centralized Security Logging,Detective,Planned,6
+LBT-LOG-002,Logging,Authentication Monitoring,Detective,Planned,6
+LBT-LOG-003,Logging,Telemetry Health Monitoring,Detective,Planned,6
+LBT-VM-001,Vulnerability Management,Authorized Vulnerability Scanning,Detective,Planned,9
+LBT-VM-002,Vulnerability Management,Remediation Retesting,Detective,Planned,9
+LBT-DP-001,Data Protection,Information Classification,Preventive,Implemented,0
+LBT-DP-002,Data Protection,Data Ownership,Preventive,Implemented,0
+LBT-IR-001,Incident Response,Incident Investigation Process,Corrective,Planned,12
+LBT-RS-001,Resilience,Configuration Recovery,Corrective,Planned,2
