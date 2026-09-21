@@ -1,0 +1,10 @@
+access_id,access_type,name,business_owner,assignment_method,sensitivity
+ACC-001,Department,Technology,Director Technology,Automatic,LBT-2
+ACC-002,Department,Engineering,Director Engineering & Data,Automatic,LBT-2
+ACC-003,Department,Biomedical R&D,Director Biomedical R&D,Automatic,LBT-2
+ACC-004,Program,ORION,Director Federal Programs,Approved Assignment,LBT-4
+ACC-005,Program,ATLAS,Director Federal Programs,Approved Assignment,LBT-4
+ACC-006,Program,HORIZON,Director Federal Programs,Approved Assignment,LBT-4
+ACC-007,Role,Security Analysts,Security Manager,Role Assignment,LBT-3
+ACC-008,Administrative,Cloud Administration,Director Technology,Explicit Approval,LBT-4
+ACC-009,Data,Proprietary Research,Chief Scientific Officer,Explicit Approval,LBT-4
