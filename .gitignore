@@ -49,3 +49,17 @@ temp/
 # Lab-specific sensitive data
 secrets/
 private/
+
+# Virtual machines
+*.vhd
+*.vhdx
+*.avhd
+*.avhdx
+*.vmcx
+*.vmrs
+
+# ISO images
+*.iso
+
+# VM exports
+vm-exports/

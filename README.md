@@ -5,7 +5,7 @@
 ## Project Status
 
 **Current Phase:** Core Infrastructure  
-**Current Milestone:** 02.01 — Host Assessment  
+**Current Milestone:** 02.03 — Lab Networking  
 **Architecture Baseline:** v0.1  
 **Infrastructure Status:** Not Deployed
 
@@ -41,8 +41,8 @@ journey from initial architecture through ongoing security operations.
 - [x] Data flow architecture
 - [x] Security architecture
 - [x] Architecture baseline
-- [ ] Host assessment
-- [ ] Virtualization platform
+- [x] Host assessment
+- [x] Virtualization platform
 - [ ] Lab networking
 - [ ] Core infrastructure
 
